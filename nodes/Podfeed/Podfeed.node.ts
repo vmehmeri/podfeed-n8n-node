@@ -1,11 +1,14 @@
 import {
 	IExecuteFunctions,
+	ILoadOptionsFunctions,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
 	NodeConnectionType,
 	NodeOperationError,
 } from 'n8n-workflow';
+
+import * as voicesData from './voices.json';
 
 export class Podfeed implements INodeType {
 	description: INodeTypeDescription = {
@@ -42,7 +45,7 @@ export class Podfeed implements INodeType {
 				],
 				default: 'audio',
 			},
-			
+
 			// Operation selection
 			{
 				displayName: 'Operation',
@@ -55,12 +58,6 @@ export class Podfeed implements INodeType {
 					},
 				},
 				options: [
-					{
-						name: 'Delete Audio',
-						value: 'deleteAudio',
-						description: 'Delete an audio file',
-						action: 'Delete audio file',
-					},
 					{
 						name: 'Generate Audio',
 						value: 'generateAudio',
@@ -78,12 +75,6 @@ export class Podfeed implements INodeType {
 						value: 'getTaskStatus',
 						description: 'Check the status of an audio generation task',
 						action: 'Get task status',
-					},
-					{
-						name: 'List Audios',
-						value: 'listAudios',
-						description: 'List generated audio files',
-						action: 'List audio files',
 					},
 					{
 						name: 'List Available Voices',
@@ -261,9 +252,9 @@ export class Podfeed implements INodeType {
 
 			// Voice Configuration - Monologue
 			{
-				displayName: 'Voice',
+				displayName: 'Voice Name or ID',
 				name: 'voice',
-				type: 'string',
+				type: 'options',
 				displayOptions: {
 					show: {
 						resource: ['audio'],
@@ -271,16 +262,20 @@ export class Podfeed implements INodeType {
 						mode: ['monologue'],
 					},
 				},
-				default: 'google-male-puck',
+				typeOptions: {
+					loadOptionsMethod: 'getVoices',
+					loadOptionsDependsOn: ['language'],
+				},
+				default: '',
 				required: true,
-				description: 'Voice to use for monologue mode (e.g., "google-male-puck", "elevenlabs-rachel")',
+				description: 'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>',
 			},
 
 			// Voice Configuration - Dialogue
 			{
-				displayName: 'Host Voice',
+				displayName: 'Host Voice Name or ID',
 				name: 'hostVoice',
-				type: 'string',
+				type: 'options',
 				displayOptions: {
 					show: {
 						resource: ['audio'],
@@ -288,15 +283,19 @@ export class Podfeed implements INodeType {
 						mode: ['dialogue'],
 					},
 				},
-				default: 'google-male-puck',
+				typeOptions: {
+					loadOptionsMethod: 'getVoices',
+					loadOptionsDependsOn: ['language'],
+				},
+				default: '',
 				required: true,
-				description: 'Host voice for dialogue mode',
+				description: 'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>',
 			},
 
 			{
-				displayName: 'Co-Host Voice',
+				displayName: 'Co-Host Voice Name or ID',
 				name: 'cohostVoice',
-				type: 'string',
+				type: 'options',
 				displayOptions: {
 					show: {
 						resource: ['audio'],
@@ -304,9 +303,13 @@ export class Podfeed implements INodeType {
 						mode: ['dialogue'],
 					},
 				},
-				default: 'google-female-leda',
+				typeOptions: {
+					loadOptionsMethod: 'getVoices',
+					loadOptionsDependsOn: ['language'],
+				},
+				default: '',
 				required: true,
-				description: 'Co-host voice for dialogue mode',
+				description: 'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>',
 			},
 
 			// Content Configuration
@@ -367,15 +370,33 @@ export class Podfeed implements INodeType {
 			{
 				displayName: 'Language',
 				name: 'language',
-				type: 'string',
+				type: 'options',
 				displayOptions: {
 					show: {
 						resource: ['audio'],
 						operation: ['generateAudio'],
 					},
 				},
+				options: [
+					{ name: 'Arabic', value: 'ar' },
+					{ name: 'Chinese (Simplified)', value: 'zh-CN' },
+					{ name: 'Czech (Czech Republic)', value: 'cs-CZ' },
+					{ name: 'Dutch (Netherlands)', value: 'nl-NL' },
+					{ name: 'English (UK)', value: 'en-GB' },
+					{ name: 'English (US)', value: 'en-US' },
+					{ name: 'French (France)', value: 'fr-FR' },
+					{ name: 'German (Germany)', value: 'de-DE' },
+					{ name: 'Italian (Italy)', value: 'it-IT' },
+					{ name: 'Japanese (Japan)', value: 'ja-JP' },
+					{ name: 'Polish (Poland)', value: 'pl-PL' },
+					{ name: 'Portuguese (Brazil)', value: 'pt-BR' },
+					{ name: 'Russian (Russia)', value: 'ru-RU' },
+					{ name: 'Spanish (Mexico)', value: 'es-MX' },
+					{ name: 'Spanish (Spain)', value: 'es-ES' },
+					{ name: 'Turkish (Turkey)', value: 'tr-TR' },
+				],
 				default: 'en-US',
-				description: 'Content language code (e.g., "en-US", "es-ES")',
+				description: 'Content language for audio generation',
 			},
 
 			// Additional Fields for Generate Audio
@@ -489,71 +510,7 @@ export class Podfeed implements INodeType {
 				description: 'Time between status checks in seconds',
 			},
 
-			// List Audios Operation Fields
-			{
-				displayName: 'Limit',
-				name: 'limit',
-				type: 'number',
-				typeOptions: {
-					minValue: 1,
-				},
-				displayOptions: {
-					show: {
-						resource: ['audio'],
-						operation: ['listAudios'],
-					},
-				},
-				default: 50,
-				description: 'Max number of results to return',
-			},
-
-			{
-				displayName: 'Offset',
-				name: 'offset',
-				type: 'number',
-				displayOptions: {
-					show: {
-						resource: ['audio'],
-						operation: ['listAudios'],
-					},
-				},
-				default: 0,
-				description: 'Number of audios to skip',
-			},
-
-			{
-				displayName: 'Status Filter',
-				name: 'statusFilter',
-				type: 'options',
-				displayOptions: {
-					show: {
-						resource: ['audio'],
-						operation: ['listAudios'],
-					},
-				},
-				options: [
-					{
-						name: 'All',
-						value: '',
-					},
-					{
-						name: 'Processing',
-						value: 'processing',
-					},
-					{
-						name: 'Completed',
-						value: 'completed',
-					},
-					{
-						name: 'Failed',
-						value: 'failed',
-					},
-				],
-				default: '',
-				description: 'Filter by status',
-			},
-
-			// Get Audio and Delete Audio Operation Fields
+			// Get Audio Operation Fields
 			{
 				displayName: 'Audio ID',
 				name: 'audioId',
@@ -561,14 +518,36 @@ export class Podfeed implements INodeType {
 				displayOptions: {
 					show: {
 						resource: ['audio'],
-						operation: ['getAudio', 'deleteAudio'],
+						operation: ['getAudio'],
 					},
 				},
 				default: '',
 				required: true,
 				description: 'The unique identifier of the audio',
 			},
+
 		],
+	};
+
+	methods = {
+		loadOptions: {
+			async getVoices(this: ILoadOptionsFunctions) {
+				const language = this.getCurrentNodeParameter('language') as string;
+				if (!language) {
+					return [];
+				}
+
+				const languageData = (voicesData as any)[language];
+				if (!languageData?.voices) {
+					return [];
+				}
+
+				return Object.entries(languageData.voices).map(([value, voice]: [string, any]) => ({
+					name: voice.display_name,
+					value: value,
+				}));
+			},
+		},
 	};
 
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
@@ -582,7 +561,7 @@ export class Podfeed implements INodeType {
 
 				if (resource === 'audio') {
 					let result: any;
-					
+
 					if (operation === 'generateAudio') {
 						const inputType = this.getNodeParameter('inputType', i) as string;
 						const mode = this.getNodeParameter('mode', i) as string;
@@ -617,10 +596,10 @@ export class Podfeed implements INodeType {
 
 						// Add voice configuration
 						if (mode === 'monologue') {
-							data.voice = this.getNodeParameter('voice', i) as string;
+							data.voice = this.getNodeParameter('voice', i) as string || 'gemini-puck';
 						} else if (mode === 'dialogue') {
-							data.hostVoice = this.getNodeParameter('hostVoice', i) as string;
-							data.coHostVoice = this.getNodeParameter('cohostVoice', i) as string;
+							data.hostVoice = this.getNodeParameter('hostVoice', i) as string || 'gemini-puck';
+							data.coHostVoice = this.getNodeParameter('cohostVoice', i) as string || 'gemini-aoede';
 						}
 
 						// Add additional fields
@@ -709,28 +688,6 @@ export class Podfeed implements INodeType {
 						if (!result) {
 							throw new NodeOperationError(this.getNode(), `Task timed out after ${timeout} seconds`);
 						}
-					} else if (operation === 'listAudios') {
-						const limit = this.getNodeParameter('limit', i) as number;
-						const offset = this.getNodeParameter('offset', i) as number;
-						const statusFilter = this.getNodeParameter('statusFilter', i) as string;
-
-						const params: any = { limit, offset };
-						if (statusFilter) {
-							params.status = statusFilter;
-						}
-
-						const credentials = await this.getCredentials('podfeedApi');
-						result = await this.helpers.requestWithAuthentication.call(
-							this,
-							'podfeedApi',
-							{
-								method: 'GET',
-								baseURL: credentials.baseUrl as string,
-								url: '/api/audios',
-								qs: params,
-								json: true,
-							}
-						);
 					} else if (operation === 'getAudio') {
 						const audioId = this.getNodeParameter('audioId', i) as string;
 						const credentials = await this.getCredentials('podfeedApi');
@@ -740,20 +697,6 @@ export class Podfeed implements INodeType {
 							'podfeedApi',
 							{
 								method: 'GET',
-								baseURL: credentials.baseUrl as string,
-								url: `/api/audios/${audioId}`,
-								json: true,
-							}
-						);
-					} else if (operation === 'deleteAudio') {
-						const audioId = this.getNodeParameter('audioId', i) as string;
-						const credentials = await this.getCredentials('podfeedApi');
-
-						result = await this.helpers.requestWithAuthentication.call(
-							this,
-							'podfeedApi',
-							{
-								method: 'DELETE',
 								baseURL: credentials.baseUrl as string,
 								url: `/api/audios/${audioId}`,
 								json: true,
@@ -772,7 +715,7 @@ export class Podfeed implements INodeType {
 							}
 						);
 					}
-					
+
 					if (result) {
 						returnData.push({ json: result });
 					}

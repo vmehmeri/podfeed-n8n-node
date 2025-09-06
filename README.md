@@ -33,9 +33,7 @@ This node supports all major Podfeed API operations:
 - **Generate Audio**: Create podcast-style audio from various input types
 - **Get Task Status**: Check the status of an audio generation task
 - **Wait for Completion**: Poll for task completion with configurable timeout
-- **List Audios**: Retrieve list of generated audio files
 - **Get Audio**: Get details for a specific audio file
-- **Delete Audio**: Remove an audio file
 - **List Available Voices**: Get all available voices organized by language
 
 ### Input Types
@@ -75,7 +73,7 @@ The **Generate Audio** operation supports 5 different input types:
 2. Choose **Text** input type
 3. Enter your text content
 4. Select **Monologue** mode
-5. Choose a voice (e.g., "google-male-puck")
+5. Choose a voice (e.g., "gemini-puck")
 6. Configure content settings
 7. Execute the node
 
