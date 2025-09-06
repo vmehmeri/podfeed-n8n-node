@@ -1,0 +1,22 @@
+{
+	"node": "n8n-nodes-base.Podfeed",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"AI",
+		"Transform",
+		"Productivity"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://podfeed.ai"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://podfeed.ai"
+			}
+		]
+	}
+}

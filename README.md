@@ -1,48 +1,112 @@
-![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+# Podfeed n8n Node
 
-# n8n-nodes-starter
+A custom n8n community node for integrating with the [Podfeed API](https://podfeed.ai) to generate podcast-style audio content using AI.
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](https://n8n.io). It includes the node linter and other dependencies.
+## Installation
 
-To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+To install this node in your n8n instance:
 
-If you would like your node to be available on n8n cloud you can also [submit your node for verification](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/).
-
-## Prerequisites
-
-You need the following installed on your development machine:
-
-* [git](https://git-scm.com/downloads)
-* Node.js and npm. Minimum version Node 20. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
-* Install n8n with:
-  ```
-  npm install n8n -g
-  ```
-* Recommended: follow n8n's guide to [set up your development environment](https://docs.n8n.io/integrations/creating-nodes/build/node-development-environment/).
-
-## Using this starter
-
-These are the basic steps for working with the starter. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
-
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
-2. Clone your new repo:
+1. Install the package:
+   ```bash
+   npm install n8n-nodes-podfeed
    ```
-   git clone https://github.com/<your organization>/<your-repo-name>.git
-   ```
-3. Run `npm i` to install dependencies.
-4. Open the project in your editor.
-5. Browse the examples in `/nodes` and `/credentials`. Modify the examples, or replace them with your own nodes.
-6. Update the `package.json` to match your details.
-7. Run `npm run lint` to check for errors or `npm run lintfix` to automatically fix errors when possible.
-8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance.
-9. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
-10. Update the LICENSE file to use your details.
-11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
 
-## More information
+2. Restart your n8n instance.
 
-Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
+## Configuration
+
+### Credentials
+
+To use this node, you need to configure your Podfeed API credentials:
+
+1. In n8n, go to **Settings** → **Credentials**
+2. Create new credentials of type **Podfeed API**
+3. Enter your API key (get it from [podfeed.ai](https://podfeed.ai))
+4. Optionally, set a custom Base URL (default: `https://api.podfeed.ai`)
+
+## Features
+
+This node supports all major Podfeed API operations:
+
+### Operations
+
+- **Generate Audio**: Create podcast-style audio from various input types
+- **Get Task Status**: Check the status of an audio generation task
+- **Wait for Completion**: Poll for task completion with configurable timeout
+- **List Audios**: Retrieve list of generated audio files
+- **Get Audio**: Get details for a specific audio file
+- **Delete Audio**: Remove an audio file
+- **List Available Voices**: Get all available voices organized by language
+
+### Input Types
+
+The **Generate Audio** operation supports 5 different input types:
+
+1. **Text**: Direct text input for immediate audio generation
+2. **URL**: Website URL to scrape and convert to audio
+3. **Topic**: Research-based generation from a topic description
+4. **Script**: Bring-your-own-script for direct text-to-speech
+5. **File**: File upload (supports PDFs, documents, audio files, etc.)
+
+### Audio Modes
+
+- **Monologue**: Single voice narration
+- **Dialogue**: Two-voice conversation with host and co-host
+
+### Voice Configuration
+
+- Support for multiple voice providers (Google, ElevenLabs, Gemini)
+- Custom voice instructions for personalized speech styles
+- Separate voice configuration for dialogue mode (host + co-host)
+
+### Content Configuration
+
+- **Complexity levels**: Beginner, Intermediate, Expert
+- **Length options**: Short, Medium, Long
+- **Language support**: Multiple languages (default: en-US)
+- **Additional options**: Emphasis, Q&A segments, custom instructions
+- **Read mode**: Direct text reading for script input type
+
+## Usage Examples
+
+### Simple Text-to-Audio
+
+1. Select **Generate Audio** operation
+2. Choose **Text** input type
+3. Enter your text content
+4. Select **Monologue** mode
+5. Choose a voice (e.g., "google-male-puck")
+6. Configure content settings
+7. Execute the node
+
+### Website-to-Podcast
+
+1. Select **Generate Audio** operation
+2. Choose **URL** input type
+3. Enter the website URL
+4. Select **Dialogue** mode for conversation-style output
+5. Choose host and co-host voices
+6. Add custom instructions in Additional Fields
+7. Execute the node
+
+### Task Monitoring
+
+1. Use **Generate Audio** to start the process
+2. Get the `task_id` from the response
+3. Use **Wait for Completion** with the task ID
+4. Configure timeout and poll interval
+5. Get the final result with audio URL
+
+## API Compatibility
+
+This node implements the full Podfeed API functionality, equivalent to the [Python SDK](https://github.com/smh-labs/podfeed-sdk-python).
+
+## Support
+
+For issues with this n8n node, please report them on the [GitHub repository](https://github.com/smh-labs/podfeed-n8n-node).
+
+For Podfeed API support, contact: support@podfeed.ai
 
 ## License
 
-[MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+MIT
