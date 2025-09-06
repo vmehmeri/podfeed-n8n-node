@@ -322,6 +322,9 @@ export class Podfeed implements INodeType {
 						resource: ['audio'],
 						operation: ['generateAudio'],
 					},
+					hide: {
+						inputType: ['script'],
+					},
 				},
 				options: [
 					{
@@ -329,12 +332,12 @@ export class Podfeed implements INodeType {
 						value: 'beginner',
 					},
 					{
-						name: 'Intermediate',
-						value: 'intermediate',
-					},
-					{
 						name: 'Expert',
 						value: 'expert',
+					},
+					{
+						name: 'Intermediate',
+						value: 'intermediate',
 					},
 				],
 				default: 'intermediate',
@@ -348,6 +351,9 @@ export class Podfeed implements INodeType {
 					show: {
 						resource: ['audio'],
 						operation: ['generateAudio'],
+					},
+					hide: {
+						inputType: ['script'],
 					},
 				},
 				options: [
@@ -399,6 +405,58 @@ export class Podfeed implements INodeType {
 				description: 'Content language for audio generation',
 			},
 
+			// Advanced Settings
+			{
+				displayName: 'Emphasis',
+				name: 'emphasis',
+				type: 'string',
+				displayOptions: {
+					show: {
+						resource: ['audio'],
+						operation: ['generateAudio'],
+					},
+					hide: {
+						inputType: ['script'],
+					},
+				},
+				default: '',
+				description: 'Content emphasis or focus area',
+			},
+
+			{
+				displayName: 'Questions To Be Answered',
+				name: 'questions',
+				type: 'string',
+				displayOptions: {
+					show: {
+						resource: ['audio'],
+						operation: ['generateAudio'],
+					},
+					hide: {
+						inputType: ['script'],
+					},
+				},
+				default: '',
+				description: 'Include Q&A segments',
+			},
+
+			{
+				displayName: 'Additional Instructions',
+				name: 'userInstructions',
+				type: 'string',
+				displayOptions: {
+					show: {
+						resource: ['audio'],
+						operation: ['generateAudio'],
+					},
+					hide: {
+						inputType: ['script'],
+					},
+				},
+				default: '',
+				description: 'Custom instructions for content generation',
+			},
+
 			// Additional Fields for Generate Audio
 			{
 				displayName: 'Additional Fields',
@@ -421,13 +479,6 @@ export class Podfeed implements INodeType {
 						description: 'Custom instructions for co-host voice (dialogue mode)',
 					},
 					{
-						displayName: 'Emphasis',
-						name: 'emphasis',
-						type: 'string',
-						default: '',
-						description: 'Content emphasis or focus area',
-					},
-					{
 						displayName: 'Host Voice Instructions',
 						name: 'hostVoiceInstructions',
 						type: 'string',
@@ -435,25 +486,11 @@ export class Podfeed implements INodeType {
 						description: 'Custom instructions for host voice (dialogue mode)',
 					},
 					{
-						displayName: 'Questions',
-						name: 'questions',
-						type: 'string',
-						default: '',
-						description: 'Include Q&A segments',
-					},
-					{
 						displayName: 'Read Mode',
 						name: 'readMode',
 						type: 'boolean',
 						default: false,
 						description: 'Whether to use direct text reading mode (monologue only)',
-					},
-					{
-						displayName: 'User Instructions',
-						name: 'userInstructions',
-						type: 'string',
-						default: '',
-						description: 'Custom instructions for content generation',
 					},
 					{
 						displayName: 'Voice Instructions',
@@ -568,6 +605,9 @@ export class Podfeed implements INodeType {
 						const level = this.getNodeParameter('level', i) as string;
 						const length = this.getNodeParameter('length', i) as string;
 						const language = this.getNodeParameter('language', i) as string;
+						const emphasis = this.getNodeParameter('emphasis', i) as string;
+						const questions = this.getNodeParameter('questions', i) as string;
+						const userInstructions = this.getNodeParameter('userInstructions', i) as string;
 						const additionalFields = this.getNodeParameter('additionalFields', i) as any;
 
 						const data: any = {
@@ -602,6 +642,17 @@ export class Podfeed implements INodeType {
 							data.coHostVoice = this.getNodeParameter('cohostVoice', i) as string || 'gemini-aoede';
 						}
 
+						// Add direct fields
+						if (emphasis) {
+							data.emphasis = emphasis;
+						}
+						if (questions) {
+							data.questions = questions;
+						}
+						if (userInstructions) {
+							data.userInstructions = userInstructions;
+						}
+
 						// Add additional fields
 						if (additionalFields.voiceInstructions) {
 							data.voiceInstructions = additionalFields.voiceInstructions;
@@ -611,15 +662,6 @@ export class Podfeed implements INodeType {
 						}
 						if (additionalFields.cohostVoiceInstructions) {
 							data.cohostVoiceInstructions = additionalFields.cohostVoiceInstructions;
-						}
-						if (additionalFields.emphasis) {
-							data.emphasis = additionalFields.emphasis;
-						}
-						if (additionalFields.questions) {
-							data.questions = additionalFields.questions;
-						}
-						if (additionalFields.userInstructions) {
-							data.userInstructions = additionalFields.userInstructions;
 						}
 						if (additionalFields.readMode) {
 							data.readMode = additionalFields.readMode;
