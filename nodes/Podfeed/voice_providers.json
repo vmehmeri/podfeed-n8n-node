@@ -1,0 +1,30 @@
+{
+	"Google": {
+		"credits_multiplier": 1.5,
+		"provider_can_mix_with_others": true
+	},
+	"Google-MultiSpeaker": {
+		"credits_multiplier": 1.5,
+		"provider_can_mix_with_others": true
+	},
+	"OpenAI": {
+		"credits_multiplier": 1.0,
+		"provider_can_mix_with_others": true
+	},
+	"Cartesia": {
+		"credits_multiplier": 1.0,
+		"provider_can_mix_with_others": true
+	},
+	"ElevenLabs": {
+		"credits_multiplier": 2.0,
+		"provider_can_mix_with_others": true
+	},
+	"Gemini": {
+		"credits_multiplier": 1.5,
+		"provider_can_mix_with_others": false
+	},
+	"Replicate": {
+		"credits_multiplier": 1.0,
+		"provider_can_mix_with_others": true
+	}
+}

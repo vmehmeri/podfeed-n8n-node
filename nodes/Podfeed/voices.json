@@ -3,130 +3,162 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-en-US.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-en-US.mp3"
             },
             "coral": {
                 "display_name": "(OpenAI) Coral",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/coral-en-US.mp3"
             },
             "ash": {
                 "display_name": "(OpenAI) Ash",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/ash-en-US.mp3"
             },
             "kokoro-nicole": {
                 "display_name": "(Kokoro) Nicole - ASMR",
+                "tts": "Replicate",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/kokoro-nicole-en-US.mp3"
             },
             "kokoro-michael": {
                 "display_name": "(Kokoro) Michael",
+                "tts": "Replicate",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/kokoro-michael-en-US.mp3"
             },
             "kokoro-adam": {
                 "display_name": "(Kokoro) Adam",
+                "tts": "Replicate",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/kokoro-adam-en-US.mp3"
             },
             "kokoro-liam": {
                 "display_name": "(Kokoro) Liam",
+                "tts": "Replicate",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/kokoro-liam-en-US.mp3"
             },
             "kokoro-bella": {
                 "display_name": "(Kokoro) Bella",
+                "tts": "Replicate",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/kokoro-bella-en-US.mp3"
             },
             "elevenlabs-cassidy": {
                 "display_name": "(ElevenLabs) Cassidy",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-cassidy-en-US.mp3"
             },
             "elevenlabs-mark": {
                 "display_name": "(ElevenLabs) Mark",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-mark-en-US.mp3"
             },
             "elevenlabs-joe": {
                 "display_name": "(ElevenLabs) Joe",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-joe-en-US.mp3"
             },
             "elevenlabs-hope": {
                 "display_name": "(ElevenLabs) Hope",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-hope-en-US.mp3"
             },
             "elevenlabs-oxley": {
                 "display_name": "(ElevenLabs) Oxley",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-oxley-en-US.mp3"
             },
             "elevenlabs-brittney": {
                 "display_name": "(ElevenLabs) Brittney",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-brittney-en-US.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - Female",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-en-US.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - Male",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-en-US.mp3"
             },
             "google-female-leda": {
                 "display_name": "(Google) Leda - Female",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-en-US.mp3"
             },
             "google-male-orus": {
                 "display_name": "(Google) Orus - Male",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-en-US.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - Female",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-en-US.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - Male",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/google-male-puck-en-US.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - Male",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-en-US.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - Female",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-en-US.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - Male",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-en-US.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - Female",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-en-US.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - Male",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-en-US.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - Female",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-en-US.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - Male",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-en-US.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - Female",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-en-US.mp3"
             },
             "google-R": {
                 "display_name": "(Google - NotebookLM) Female",
+                "tts": "Google-MultiSpeaker",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/google-multispeaker-fe-ma.mp3"
             },
             "google-S": {
                 "display_name": "(Google - NotebookLM) Male",
+                "tts": "Google-MultiSpeaker",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/google-multispeaker.mp3"
             },
             "google-T": {
                 "display_name": "(Google - NotebookLM) Male 2",
+                "tts": "Google-MultiSpeaker",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/google-multispeaker-single-t.mp3"
             }
         }
@@ -135,90 +167,112 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-pt-BR.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-pt-BR.mp3"
             },
             "coral": {
                 "display_name": "(OpenAI) Coral",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/coral-pt-BR.mp3"
             },
             "ash": {
                 "display_name": "(OpenAI) Ash",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/ash-pt-BR.mp3"
             },
             "elevenlabs-keren": {
                 "display_name": "(ElevenLabs) Keren",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-keren-pt-BR.mp3"
             },
             "elevenlabs-joao": {
                 "display_name": "(ElevenLabs) João",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-joao-pt-BR.mp3"
             },
             "elevenlabs-yasmin": {
                 "display_name": "(ElevenLabs) Yasmin",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-yasmin-pt-BR.mp3"
             },
             "elevenlabs-guilherme": {
                 "display_name": "(ElevenLabs) Guilherme",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-guilherme-pt-BR.mp3"
             },
             "elevenlabs-gabby": {
                 "display_name": "(ElevenLabs) Gabby",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-gabby-pt-BR.mp3"
             },
             "elevenlabs-estive": {
                 "display_name": "(ElevenLabs) Estive",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-estive-pt-BR.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - Feminina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-pt-BR.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - Masculina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-pt-BR.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - Feminina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-pt-BR.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - Masculina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-pt-BR.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - Masculina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-pt-BR.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - Feminina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-pt-BR.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - Masculina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-pt-BR.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - Feminina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-pt-BR.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - Masculina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-pt-BR.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - Feminina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-pt-BR.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - Masculina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-pt-BR.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - Feminina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-pt-BR.mp3"
             }
         }
@@ -227,74 +281,92 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-en-GB.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-en-GB.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - Female",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-en-GB.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - Male",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-en-GB.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - Female",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-en-GB.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - Male",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-en-GB.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - Male",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-en-GB.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - Female",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-en-GB.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - Male",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-en-GB.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - Female",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-en-GB.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - Male",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-en-GB.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - Female",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-en-GB.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - Male",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-en-GB.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - Female",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-en-GB.mp3"
             },
             "elevenlabs-elaine": {
                 "display_name": "(ElevenLabs) Elaine",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-elaine-en-GB.mp3"
             },
             "elevenlabs-archer": {
                 "display_name": "(ElevenLabs) Archer",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-archer-en-GB.mp3"
             },
             "elevenlabs-conversational-joe": {
                 "display_name": "(ElevenLabs) Joe",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-conversational-joe-en-GB.mp3"
             },
             "elevenlabs-shelby": {
                 "display_name": "(ElevenLabs) Shelby",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-shelby-en-GB.mp3"
             }
         }
@@ -303,58 +375,72 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-es-US.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-es-US.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - Femenina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-es-US.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - Masculina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-es-US.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - Femenina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-es-US.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - Masculina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-es-US.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - Masculina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-es-US.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - Femenina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-es-US.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - Masculina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-es-US.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - Femenina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-es-US.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - Masculina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-es-US.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - Femenina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-es-US.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - Masculina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-es-US.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - Femenina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-es-US.mp3"
             }
         }
@@ -363,66 +449,82 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-es-ES.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-es-ES.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - Femenina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-es-ES.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - Masculina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-es-ES.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - Femenina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-es-ES.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - Masculina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-es-ES.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - Masculina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-es-ES.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - Femenina",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-es-ES.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - Masculina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-es-ES.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - Femenina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-es-ES.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - Masculina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-es-ES.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - Femenina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-es-ES.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - Masculina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-es-ES.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - Femenina",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-es-ES.mp3"
             },
             "elevenlabs-sara": {
                 "display_name": "(ElevenLabs) Sara",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-sara-es-ES.mp3"
             },
             "elevenlabs-martin": {
                 "display_name": "(ElevenLabs) Martin",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-martin-es-ES.mp3"
             }
         }
@@ -431,74 +533,92 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-fr-FR.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-fr-FR.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - Féminine",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-fr-FR.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - Masculine",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-fr-FR.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - Féminine",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-fr-FR.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - Masculine",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-fr-FR.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - Masculine",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-fr-FR.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - Féminine",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-fr-FR.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - Masculine",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-fr-FR.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - Féminine",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-fr-FR.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - Masculine",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-fr-FR.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - Féminine",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-fr-FR.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - Masculine",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-fr-FR.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - Féminine",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-fr-FR.mp3"
             },
             "elevenlabs-mademoiselle": {
                 "display_name": "(ElevenLabs) Mademoiselle",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-mademoiselle-fr-FR.mp3"
             },
             "elevenlabs-theo": {
                 "display_name": "(ElevenLabs) Théo",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-theo-fr-FR.mp3"
             },
             "elevenlabs-jessy": {
                 "display_name": "(ElevenLabs) Jessy",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-elevenlabs-jessy-fr-FR.mp3"
             },
             "elevenlabs-nicolas": {
                 "display_name": "(ElevenLabs) Nicolas",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-elevenlabs-nicolas-fr-FR.mp3"
             }
         }
@@ -507,18 +627,22 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-sv.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-sv.mp3"
             },
             "elevenlabs-adam": {
                 "display_name": "(ElevenLabs) Adam",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-adam-sv.mp3"
             },
             "elevenlabs-sanna": {
                 "display_name": "(ElevenLabs) Sanna",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-sanna-sv.mp3"
             }
         }
@@ -527,74 +651,92 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-de-DE.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-de-DE.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - Weiblich",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-de-DE.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - Männlich",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-de-DE.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - Weiblich",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-de-DE.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - Männlich",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-de-DE.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - Männlich",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-de-DE.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - Weiblich",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-de-DE.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - Männlich",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-de-DE.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - Weiblich",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-de-DE.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - Männlich",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-de-DE.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - Weiblich",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-de-DE.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - Männlich",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-de-DE.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - Weiblich",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-de-DE.mp3"
             },
             "elevenlabs-lea": {
                 "display_name": "(ElevenLabs) Lea",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-lea-de-DE.mp3"
             },
             "elevenlabs-otto": {
                 "display_name": "(ElevenLabs) Otto",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-otto-de-DE.mp3"
             },
             "elevenlabs-felix": {
                 "display_name": "(ElevenLabs) Felix",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-felix-de-DE.mp3"
             },
             "elevenlabs-dana": {
                 "display_name": "(ElevenLabs) Dana",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-dana-de-DE.mp3"
             }
         }
@@ -603,58 +745,72 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-it-IT.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-it-IT.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - Femminile",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-it-IT.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - Maschile",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-it-IT.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - Femminile",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-it-IT.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - Maschile",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-it-IT.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - Maschile",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-it-IT.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - Femminile",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-it-IT.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - Maschile",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-it-IT.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - Femminile",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-it-IT.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - Maschile",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-it-IT.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - Femminile",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-it-IT.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - Maschile",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-it-IT.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - Femminile",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-it-IT.mp3"
             }
         }
@@ -663,66 +819,82 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-hi.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-hi.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - महिला",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-hi.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - पुरुष",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-hi.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - महिला",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-hi.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - पुरुष",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-hi.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - पुरुष",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-hi.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - महिला",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-hi.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - पुरुष",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-hi.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - महिला",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-hi.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - पुरुष",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-hi.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - महिला",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-hi.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - पुरुष",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-hi.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - महिला",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-hi.mp3"
             },
             "elevenlabs-muskaan": {
                 "display_name": "(ElevenLabs) Muskaan",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-muskaan-hi.mp3"
             },
             "elevenlabs-leo": {
                 "display_name": "(ElevenLabs) Leo",
+                "tts": "ElevenLabs",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/elevenlabs-leo-hi.mp3"
             }
         }
@@ -731,58 +903,72 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-ta-IN.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-ta-IN.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - பெண்",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-ta-IN.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - ஆண்",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-ta-IN.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - பெண்",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-ta-IN.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - ஆண்",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-ta-IN.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - ஆண்",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-ta-IN.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - பெண்",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-ta-IN.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - ஆண்",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-ta-IN.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - பெண்",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-ta-IN.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - ஆண்",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-ta-IN.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - பெண்",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-ta-IN.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - ஆண்",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-ta-IN.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - பெண்",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-ta-IN.mp3"
             }
         }
@@ -791,58 +977,72 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-te-IN.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-te-IN.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - స్త్రీ",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-te-IN.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - పురుషుడు",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-te-IN.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - స్త్రీ",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-te-IN.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - పురుషుడు",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-te-IN.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - పురుషుడు",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-te-IN.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - స్త్రీ",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-te-IN.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - పురుషుడు",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-te-IN.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - స్త్రీ",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-te-IN.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - పురుషుడు",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-te-IN.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - స్త్రీ",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-te-IN.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - పురుషుడు",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-te-IN.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - స్త్రీ",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-te-IN.mp3"
             }
         }
@@ -851,58 +1051,72 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-nl.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-nl.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - Vrouwelijke",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-nl.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - Mannelijke",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-nl.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - Vrouwelijke",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-nl.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - Mannelijke",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-nl.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - Mannelijke",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-nl.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - Vrouwelijke",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-nl.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - Mannelijke",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-nl.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - Vrouwelijke",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-nl.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - Mannelijke",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-nl.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - Vrouwelijke",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-nl.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - Mannelijke",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-nl.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - Vrouwelijke",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-nl.mp3"
             }
         }
@@ -911,58 +1125,72 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-pl.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-pl.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - Kobieta",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-pl.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - Mężczyzna",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-pl.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - Kobieta",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-pl.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - Mężczyzna",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-pl.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - Mężczyzna",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-pl.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - Kobieta",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-pl.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - Mężczyzna",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-pl.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - Kobieta",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-pl.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - Mężczyzna",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-pl.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - Kobieta",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-pl.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - Mężczyzna",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-pl.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - Kobieta",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-pl.mp3"
             }
         }
@@ -971,58 +1199,72 @@
         "voices": {
             "shimmer": {
                 "display_name": "(OpenAI) Shimmer",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/shimmer-ar.mp3"
             },
             "echo": {
                 "display_name": "(OpenAI) Echo",
+                "tts": "OpenAI",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/echo-ar.mp3"
             },
             "google-female": {
                 "display_name": "(Google) Leda - أنثى",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-ar.mp3"
             },
             "google-male": {
                 "display_name": "(Google) Orus - ذكر",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-ar.mp3"
             },
             "google-female-aoede": {
                 "display_name": "(Google) Aoede - أنثى",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-aoede-ar.mp3"
             },
             "google-male-puck": {
                 "display_name": "(Google) Puck - ذكر",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-puck-ar.mp3"
             },
             "google-male-achird": {
                 "display_name": "(Google) Achird - ذكر",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-male-achird-ar.mp3"
             },
             "google-female-achernar": {
                 "display_name": "(Google) Achernar - أنثى",
+                "tts": "Google",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-google-female-achernar-ar.mp3"
             },
             "gemini-achird": {
                 "display_name": "(Gemini) Achird - ذكر",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achird-ar.mp3"
             },
             "gemini-achernar": {
                 "display_name": "(Gemini) Achernar - أنثى",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-achernar-ar.mp3"
             },
             "gemini-puck": {
                 "display_name": "(Gemini) Puck - ذكر",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-puck-ar.mp3"
             },
             "gemini-aoede": {
                 "display_name": "(Gemini) Aoede - أنثى",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-aoede-ar.mp3"
             },
             "gemini-orus": {
                 "display_name": "(Gemini) Orus - ذكر",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-orus-ar.mp3"
             },
             "gemini-leda": {
                 "display_name": "(Gemini) Leda - أنثى",
+                "tts": "Gemini",
                 "sample_url": "https://storage.googleapis.com/podfeed-public-bkt/voice_samples/sample-gemini-leda-ar.mp3"
             }
         }

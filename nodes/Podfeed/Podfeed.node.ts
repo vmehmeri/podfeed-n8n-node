@@ -9,6 +9,7 @@ import {
 } from 'n8n-workflow';
 
 import * as voicesData from './voices.json';
+import * as voiceProvidersData from './voice_providers.json';
 
 export class Podfeed implements INodeType {
 	description: INodeTypeDescription = {
@@ -579,13 +580,21 @@ export class Podfeed implements INodeType {
 					return [];
 				}
 
-				return Object.entries(languageData.voices).map(([value, voice]: [string, any]) => ({
-					name: voice.display_name,
-					value: value,
-				}));
+				return Object.entries(languageData.voices).map(([value, voice]: [string, any]) => {
+					const ttsProvider = voice.tts;
+					const providerConfig = (voiceProvidersData as any)[ttsProvider];
+					const creditsMultiplier = providerConfig?.credits_multiplier || 1.0;
+					const displayNameWithCost = `${voice.display_name} - ${creditsMultiplier} credits/min`;
+					
+					return {
+						name: displayNameWithCost,
+						value: value,
+					};
+				});
 			},
 		},
 	};
+
 
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 		const items = this.getInputData();
@@ -638,8 +647,35 @@ export class Podfeed implements INodeType {
 						if (mode === 'monologue') {
 							data.voice = this.getNodeParameter('voice', i) as string || 'gemini-puck';
 						} else if (mode === 'dialogue') {
-							data.hostVoice = this.getNodeParameter('hostVoice', i) as string || 'gemini-puck';
-							data.coHostVoice = this.getNodeParameter('cohostVoice', i) as string || 'gemini-aoede';
+							const hostVoiceId = this.getNodeParameter('hostVoice', i) as string || 'gemini-puck';
+							const cohostVoiceId = this.getNodeParameter('cohostVoice', i) as string || 'gemini-aoede';
+							
+							// Validate voice mixing compatibility
+							const languageData = (voicesData as any)[language];
+							if (languageData?.voices) {
+								const hostVoice = languageData.voices[hostVoiceId];
+								const cohostVoice = languageData.voices[cohostVoiceId];
+								
+								if (hostVoice && cohostVoice) {
+									const hostProvider = hostVoice.tts;
+									const cohostProvider = cohostVoice.tts;
+									
+									const hostProviderConfig = (voiceProvidersData as any)[hostProvider];
+									const cohostProviderConfig = (voiceProvidersData as any)[cohostProvider];
+
+									// Check if either provider cannot mix with others
+									if (!hostProviderConfig?.provider_can_mix_with_others && hostProvider !== cohostProvider) {
+										throw new NodeOperationError(this.getNode(), `${hostProvider} voices cannot be mixed with other voice providers. Please select another ${hostProvider} voice for the co-host.`);
+									}
+
+									if (!cohostProviderConfig?.provider_can_mix_with_others && hostProvider !== cohostProvider) {
+										throw new NodeOperationError(this.getNode(), `${cohostProvider} voices cannot be mixed with other voice providers. Please select another ${cohostProvider} voice for the host.`);
+									}
+								}
+							}
+							
+							data.hostVoice = hostVoiceId;
+							data.coHostVoice = cohostVoiceId;
 						}
 
 						// Add direct fields
