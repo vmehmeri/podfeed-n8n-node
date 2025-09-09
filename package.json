@@ -8,7 +8,9 @@
     "audio",
     "podcast",
     "ai",
-    "text-to-speech"
+    "text-to-speech",
+    "voice",
+    "tts"
   ],
   "license": "MIT",
   "homepage": "https://podfeed.ai",

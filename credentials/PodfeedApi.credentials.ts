@@ -11,7 +11,7 @@ export class PodfeedApi implements ICredentialType {
 	documentationUrl = 'https://podfeed.ai';
 	properties: INodeProperties[] = [
 		{
-			displayName: 'API Key',
+			displayName: 'API Key from https://podfeed.ai',
 			name: 'apiKey',
 			type: 'string',
 			default: '',
