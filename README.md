@@ -97,11 +97,11 @@ The **Generate Audio** operation supports 5 different input types:
 
 ## API Compatibility
 
-This node implements the full Podfeed API functionality, equivalent to the [Python SDK](https://github.com/smh-labs/podfeed-sdk-python).
+This node implements the full Podfeed API functionality, equivalent to the [Python SDK](https://github.com/vmehmeri/podfeed-sdk-python).
 
 ## Support
 
-For issues with this n8n node, please report them on the [GitHub repository](https://github.com/smh-labs/podfeed-n8n-node).
+For issues with this n8n node, please report them on the [GitHub repository](https://github.com/vmehmeri/podfeed-n8n-node).
 
 For Podfeed API support, contact: support@podfeed.ai
 
