@@ -83,12 +83,6 @@ export class Podfeed implements INodeType {
 						description: 'Get all available voices organized by language',
 						action: 'List available voices',
 					},
-					{
-						name: 'Wait for Completion',
-						value: 'waitForCompletion',
-						description: 'Wait for an audio generation task to complete',
-						action: 'Wait for completion',
-					},
 				],
 				default: 'generateAudio',
 			},
@@ -511,41 +505,12 @@ export class Podfeed implements INodeType {
 				displayOptions: {
 					show: {
 						resource: ['audio'],
-						operation: ['getTaskStatus', 'waitForCompletion'],
+						operation: ['getTaskStatus'],
 					},
 				},
 				default: '',
 				required: true,
 				description: 'The task ID returned from generate audio',
-			},
-
-			// Wait for Completion Operation Fields
-			{
-				displayName: 'Timeout (Seconds)',
-				name: 'timeout',
-				type: 'number',
-				displayOptions: {
-					show: {
-						resource: ['audio'],
-						operation: ['waitForCompletion'],
-					},
-				},
-				default: 3600,
-				description: 'Maximum time to wait in seconds',
-			},
-
-			{
-				displayName: 'Poll Interval (Seconds)',
-				name: 'pollInterval',
-				type: 'number',
-				displayOptions: {
-					show: {
-						resource: ['audio'],
-						operation: ['waitForCompletion'],
-					},
-				},
-				default: 30,
-				description: 'Time between status checks in seconds',
 			},
 
 			// Get Audio Operation Fields
@@ -729,43 +694,6 @@ export class Podfeed implements INodeType {
 								json: true,
 							}
 						);
-					} else if (operation === 'waitForCompletion') {
-						const taskId = this.getNodeParameter('taskId', i) as string;
-						const timeout = this.getNodeParameter('timeout', i) as number;
-						const pollInterval = this.getNodeParameter('pollInterval', i) as number;
-
-						const credentials = await this.getCredentials('podfeedApi');
-						const startTime = Date.now();
-						const timeoutMs = timeout * 1000;
-
-						while (Date.now() - startTime < timeoutMs) {
-							await new Promise<void>(resolve => {
-								(globalThis as any).setTimeout(resolve, pollInterval * 1000);
-							});
-
-							const status = await this.helpers.httpRequestWithAuthentication.call(
-								this,
-								'podfeedApi',
-								{
-									method: 'GET',
-									baseURL: credentials.baseUrl as string,
-									url: `/api/audios/tasks/${taskId}`,
-									json: true,
-								}
-							);
-
-							if (status.status === 'completed') {
-								result = status;
-								break;
-							} else if (status.status === 'failed') {
-								const errorMsg = status.error || 'Task failed';
-								throw new NodeOperationError(this.getNode(), `Audio generation failed: ${errorMsg}`);
-							}
-						}
-
-						if (!result) {
-							throw new NodeOperationError(this.getNode(), `Task timed out after ${timeout} seconds`);
-						}
 					} else if (operation === 'getAudio') {
 						const audioId = this.getNodeParameter('audioId', i) as string;
 						const credentials = await this.getCredentials('podfeedApi');
