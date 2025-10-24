@@ -585,7 +585,7 @@ export class Podfeed implements INodeType {
 					const providerConfig = (voiceProvidersData as any)[ttsProvider];
 					const creditsMultiplier = providerConfig?.credits_multiplier || 1.0;
 					const displayNameWithCost = `${voice.display_name} - ${creditsMultiplier} credits/min`;
-					
+
 					return {
 						name: displayNameWithCost,
 						value: value,
@@ -649,17 +649,17 @@ export class Podfeed implements INodeType {
 						} else if (mode === 'dialogue') {
 							const hostVoiceId = this.getNodeParameter('hostVoice', i) as string || 'gemini-puck';
 							const cohostVoiceId = this.getNodeParameter('cohostVoice', i) as string || 'gemini-aoede';
-							
+
 							// Validate voice mixing compatibility
 							const languageData = (voicesData as any)[language];
 							if (languageData?.voices) {
 								const hostVoice = languageData.voices[hostVoiceId];
 								const cohostVoice = languageData.voices[cohostVoiceId];
-								
+
 								if (hostVoice && cohostVoice) {
 									const hostProvider = hostVoice.tts;
 									const cohostProvider = cohostVoice.tts;
-									
+
 									const hostProviderConfig = (voiceProvidersData as any)[hostProvider];
 									const cohostProviderConfig = (voiceProvidersData as any)[cohostProvider];
 
@@ -673,7 +673,7 @@ export class Podfeed implements INodeType {
 									}
 								}
 							}
-							
+
 							data.hostVoice = hostVoiceId;
 							data.coHostVoice = cohostVoiceId;
 						}
@@ -704,7 +704,7 @@ export class Podfeed implements INodeType {
 						}
 
 						const credentials = await this.getCredentials('podfeedApi');
-						result = await this.helpers.requestWithAuthentication.call(
+						result = await this.helpers.httpRequestWithAuthentication.call(
 							this,
 							'podfeedApi',
 							{
@@ -719,7 +719,7 @@ export class Podfeed implements INodeType {
 						const taskId = this.getNodeParameter('taskId', i) as string;
 						const credentials = await this.getCredentials('podfeedApi');
 
-						result = await this.helpers.requestWithAuthentication.call(
+						result = await this.helpers.httpRequestWithAuthentication.call(
 							this,
 							'podfeedApi',
 							{
@@ -743,7 +743,7 @@ export class Podfeed implements INodeType {
 								(globalThis as any).setTimeout(resolve, pollInterval * 1000);
 							});
 
-							const status = await this.helpers.requestWithAuthentication.call(
+							const status = await this.helpers.httpRequestWithAuthentication.call(
 								this,
 								'podfeedApi',
 								{
@@ -770,7 +770,7 @@ export class Podfeed implements INodeType {
 						const audioId = this.getNodeParameter('audioId', i) as string;
 						const credentials = await this.getCredentials('podfeedApi');
 
-						result = await this.helpers.requestWithAuthentication.call(
+						result = await this.helpers.httpRequestWithAuthentication.call(
 							this,
 							'podfeedApi',
 							{
@@ -782,7 +782,7 @@ export class Podfeed implements INodeType {
 						);
 					} else if (operation === 'listVoices') {
 						const credentials = await this.getCredentials('podfeedApi');
-						result = await this.helpers.requestWithAuthentication.call(
+						result = await this.helpers.httpRequestWithAuthentication.call(
 							this,
 							'podfeedApi',
 							{
@@ -795,7 +795,10 @@ export class Podfeed implements INodeType {
 					}
 
 					if (result) {
-						returnData.push({ json: result });
+						returnData.push({
+							json: result,
+							pairedItem: { item: i }
+					});
 					}
 				}
 			} catch (error) {
