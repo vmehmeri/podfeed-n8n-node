@@ -21,8 +21,8 @@ To use this node, you need to configure your Podfeed API credentials:
 
 1. In n8n, go to **Settings** → **Credentials**
 2. Create new credentials of type **Podfeed API**
-3. Enter your API key (get it from [podfeed.ai](https://podfeed.ai))
-4. Optionally, set a custom Base URL (default: `https://api.podfeed.ai`)
+3. Enter your API key (get it from [podfeed.ai](https://podfeed.ai)): Click on **Get started**, sign in, and navigate to the API menu. 
+
 
 ## Features
 
@@ -32,8 +32,7 @@ This node supports all major Podfeed API operations:
 
 - **Generate Audio**: Create podcast-style audio from various input types
 - **Get Task Status**: Check the status of an audio generation task
-- **Wait for Completion**: Poll for task completion with configurable timeout
-- **Get Audio**: Get details for a specific audio file
+- **Get Audio**: Get details for a specific audio 
 - **List Available Voices**: Get all available voices organized by language
 
 ### Input Types
@@ -65,6 +64,8 @@ The **Generate Audio** operation supports 5 different input types:
 - **Additional options**: Emphasis, Q&A segments, custom instructions
 - **Read mode**: Direct text reading for script input type
 
+Check out the audio samples at [podfeed.ai](https://podfeed.ai) to see results for different settings.
+
 ## Usage Examples
 
 ### Simple Text-to-Audio
@@ -87,13 +88,39 @@ The **Generate Audio** operation supports 5 different input types:
 6. Add custom instructions in Additional Fields
 7. Execute the node
 
-### Task Monitoring
+### Polling for Task Completion
 
-1. Use **Generate Audio** to start the process
-2. Get the `task_id` from the response
-3. Use **Wait for Completion** with the task ID
-4. Configure timeout and poll interval
-5. Get the final result with audio URL
+Audio generation is asynchronous. Build a polling workflow using n8n's standard loop pattern to monitor task completion.
+
+**Workflow Pattern:**
+
+This pattern uses n8n's ["loop until a condition is met"](https://docs.n8n.io/flow-logic/looping/#loop-until-a-condition-is-met) approach:
+
+1. **Podfeed: Generate Audio**
+   - Returns `taskId` and initial status
+
+2. **Wait Node** (n8n core node)
+   - Set wait time (e.g., 30-60 seconds)
+   - This prevents overloading the API with requests
+
+3. **Podfeed: Get Task Status**
+   - Use expression: `{{ $('Podfeed').item.json.task_id }}`
+   - Returns status object with `status` field: `'in_progress'`, `'completed'`, or `'failed'`
+
+4. **IF Node** (n8n core node)
+   - **Condition**: `{{ $json.status === 'completed' || $json.status === 'failed' }}`
+   - **TRUE branch**: Task is done (either success or failure) → Exit loop
+   - **FALSE branch**: Task still in progress → **Wire this output back to the Wait node (step 2)**
+
+   💡 The loop is created by connecting the IF node's FALSE output wire back to the Wait node's input.
+
+5. **Handle Result** (after exiting the loop)
+   - Add another IF node or Switch node to handle `completed` vs `failed`
+   - On success: Use `audio_id` from response to get audio details or URL
+   - On failure: Handle error appropriately
+
+**Example n8n Workflow:**
+For a visual example of this loop pattern, see the [official n8n loop workflow example](https://n8n.io/workflows/1130).
 
 ## API Compatibility
 
