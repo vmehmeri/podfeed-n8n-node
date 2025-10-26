@@ -675,7 +675,7 @@ export class Podfeed implements INodeType {
 							{
 								method: 'POST',
 								baseURL: credentials.baseUrl as string,
-								url: '/api/audios',
+								url: '/api/v1/audios',
 								body: data,
 								json: true,
 							}
@@ -690,7 +690,7 @@ export class Podfeed implements INodeType {
 							{
 								method: 'GET',
 								baseURL: credentials.baseUrl as string,
-								url: `/api/audios/tasks/${taskId}`,
+								url: `/api/v1/audios/tasks/${taskId}`,
 								json: true,
 							}
 						);
@@ -704,7 +704,7 @@ export class Podfeed implements INodeType {
 							{
 								method: 'GET',
 								baseURL: credentials.baseUrl as string,
-								url: `/api/audios/${audioId}`,
+								url: `/api/v1/audios/${audioId}`,
 								json: true,
 							}
 						);
@@ -716,7 +716,7 @@ export class Podfeed implements INodeType {
 							{
 								method: 'GET',
 								baseURL: credentials.baseUrl as string,
-								url: '/api/voices',
+								url: '/api/v1/voices',
 								json: true,
 							}
 						);
