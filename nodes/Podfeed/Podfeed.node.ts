@@ -307,67 +307,6 @@ export class Podfeed implements INodeType {
 				description: 'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>',
 			},
 
-			// Content Configuration
-			{
-				displayName: 'Content Level',
-				name: 'level',
-				type: 'options',
-				displayOptions: {
-					show: {
-						resource: ['audio'],
-						operation: ['generateAudio'],
-					},
-					hide: {
-						inputType: ['script'],
-					},
-				},
-				options: [
-					{
-						name: 'Beginner',
-						value: 'beginner',
-					},
-					{
-						name: 'Expert',
-						value: 'expert',
-					},
-					{
-						name: 'Intermediate',
-						value: 'intermediate',
-					},
-				],
-				default: 'intermediate',
-			},
-
-			{
-				displayName: 'Content Length',
-				name: 'length',
-				type: 'options',
-				displayOptions: {
-					show: {
-						resource: ['audio'],
-						operation: ['generateAudio'],
-					},
-					hide: {
-						inputType: ['script'],
-					},
-				},
-				options: [
-					{
-						name: 'Short',
-						value: 'short',
-					},
-					{
-						name: 'Medium',
-						value: 'medium',
-					},
-					{
-						name: 'Long',
-						value: 'long',
-					},
-				],
-				default: 'medium',
-			},
-
 			{
 				displayName: 'Language',
 				name: 'language',
@@ -400,64 +339,12 @@ export class Podfeed implements INodeType {
 				description: 'Content language for audio generation',
 			},
 
-			// Advanced Settings
+			// Additional Options Collection
 			{
-				displayName: 'Emphasis',
-				name: 'emphasis',
-				type: 'string',
-				displayOptions: {
-					show: {
-						resource: ['audio'],
-						operation: ['generateAudio'],
-					},
-					hide: {
-						inputType: ['script'],
-					},
-				},
-				default: '',
-				description: 'Content emphasis or focus area',
-			},
-
-			{
-				displayName: 'Questions To Be Answered',
-				name: 'questions',
-				type: 'string',
-				displayOptions: {
-					show: {
-						resource: ['audio'],
-						operation: ['generateAudio'],
-					},
-					hide: {
-						inputType: ['script'],
-					},
-				},
-				default: '',
-				description: 'Include Q&A segments',
-			},
-
-			{
-				displayName: 'Additional Instructions',
-				name: 'userInstructions',
-				type: 'string',
-				displayOptions: {
-					show: {
-						resource: ['audio'],
-						operation: ['generateAudio'],
-					},
-					hide: {
-						inputType: ['script'],
-					},
-				},
-				default: '',
-				description: 'Custom instructions for content generation',
-			},
-
-			// Additional Fields for Generate Audio
-			{
-				displayName: 'Additional Fields',
-				name: 'additionalFields',
+				displayName: 'Additional Options',
+				name: 'additionalOptions',
 				type: 'collection',
-				placeholder: 'Add Field',
+				placeholder: 'Add Option',
 				default: {},
 				displayOptions: {
 					show: {
@@ -467,6 +354,18 @@ export class Podfeed implements INodeType {
 				},
 				options: [
 					{
+						displayName: 'Additional Instructions',
+						name: 'userInstructions',
+						type: 'string',
+						displayOptions: {
+							hide: {
+								'/inputType': ['script'],
+							},
+						},
+						default: '',
+						description: 'Custom instructions for content generation',
+					},
+					{
 						displayName: 'Co-Host Voice Instructions',
 						name: 'cohostVoiceInstructions',
 						type: 'string',
@@ -474,11 +373,87 @@ export class Podfeed implements INodeType {
 						description: 'Custom instructions for co-host voice (dialogue mode)',
 					},
 					{
+						displayName: 'Content Length',
+						name: 'length',
+						type: 'options',
+						displayOptions: {
+							hide: {
+								'/inputType': ['script'],
+							},
+						},
+						options: [
+							{
+								name: 'Short',
+								value: 'short',
+							},
+							{
+								name: 'Medium',
+								value: 'medium',
+							},
+							{
+								name: 'Long',
+								value: 'long',
+							},
+						],
+						default: 'medium',
+						description: 'Desired length of the generated content',
+					},
+					{
+						displayName: 'Content Level',
+						name: 'level',
+						type: 'options',
+						displayOptions: {
+							hide: {
+								'/inputType': ['script'],
+							},
+						},
+						options: [
+							{
+								name: 'Beginner',
+								value: 'beginner',
+							},
+							{
+								name: 'Expert',
+								value: 'expert',
+							},
+							{
+								name: 'Intermediate',
+								value: 'intermediate',
+							},
+						],
+						default: 'intermediate',
+						description: 'Target audience level for content generation',
+					},
+					{
+						displayName: 'Emphasis',
+						name: 'emphasis',
+						type: 'string',
+						displayOptions: {
+							hide: {
+								'/inputType': ['script'],
+							},
+						},
+						default: '',
+						description: 'Content emphasis or focus area',
+					},
+					{
 						displayName: 'Host Voice Instructions',
 						name: 'hostVoiceInstructions',
 						type: 'string',
 						default: '',
 						description: 'Custom instructions for host voice (dialogue mode)',
+					},
+					{
+						displayName: 'Questions To Be Answered',
+						name: 'questions',
+						type: 'string',
+						displayOptions: {
+							hide: {
+								'/inputType': ['script'],
+							},
+						},
+						default: '',
+						description: 'Include Q&A segments',
 					},
 					{
 						displayName: 'Read Mode',
@@ -576,21 +551,22 @@ export class Podfeed implements INodeType {
 					if (operation === 'generateAudio') {
 						const inputType = this.getNodeParameter('inputType', i) as string;
 						const mode = this.getNodeParameter('mode', i) as string;
-						const level = this.getNodeParameter('level', i) as string;
-						const length = this.getNodeParameter('length', i) as string;
 						const language = this.getNodeParameter('language', i) as string;
-						const emphasis = this.getNodeParameter('emphasis', i) as string;
-						const questions = this.getNodeParameter('questions', i) as string;
-						const userInstructions = this.getNodeParameter('userInstructions', i) as string;
-						const additionalFields = this.getNodeParameter('additionalFields', i) as any;
+						const additionalOptions = this.getNodeParameter('additionalOptions', i) as any;
 
 						const data: any = {
 							inputType,
 							mode,
 							language,
-							level,
-							length,
 						};
+
+						// Add optional fields from additionalOptions
+						if (additionalOptions.level) {
+							data.level = additionalOptions.level;
+						}
+						if (additionalOptions.length) {
+							data.length = additionalOptions.length;
+						}
 
 						// Add input content based on type
 						if (inputType === 'text') {
@@ -643,29 +619,27 @@ export class Podfeed implements INodeType {
 							data.coHostVoice = cohostVoiceId;
 						}
 
-						// Add direct fields
-						if (emphasis) {
-							data.emphasis = emphasis;
+						// Add additional options
+						if (additionalOptions.emphasis) {
+							data.emphasis = additionalOptions.emphasis;
 						}
-						if (questions) {
-							data.questions = questions;
+						if (additionalOptions.questions) {
+							data.questions = additionalOptions.questions;
 						}
-						if (userInstructions) {
-							data.userInstructions = userInstructions;
+						if (additionalOptions.userInstructions) {
+							data.userInstructions = additionalOptions.userInstructions;
 						}
-
-						// Add additional fields
-						if (additionalFields.voiceInstructions) {
-							data.voiceInstructions = additionalFields.voiceInstructions;
+						if (additionalOptions.voiceInstructions) {
+							data.voiceInstructions = additionalOptions.voiceInstructions;
 						}
-						if (additionalFields.hostVoiceInstructions) {
-							data.hostVoiceInstructions = additionalFields.hostVoiceInstructions;
+						if (additionalOptions.hostVoiceInstructions) {
+							data.hostVoiceInstructions = additionalOptions.hostVoiceInstructions;
 						}
-						if (additionalFields.cohostVoiceInstructions) {
-							data.cohostVoiceInstructions = additionalFields.cohostVoiceInstructions;
+						if (additionalOptions.cohostVoiceInstructions) {
+							data.cohostVoiceInstructions = additionalOptions.cohostVoiceInstructions;
 						}
-						if (additionalFields.readMode) {
-							data.readMode = additionalFields.readMode;
+						if (additionalOptions.readMode) {
+							data.readMode = additionalOptions.readMode;
 						}
 
 						const credentials = await this.getCredentials('podfeedApi');
